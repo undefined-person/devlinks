@@ -44,7 +44,7 @@ export const Input = (props: InputProps) => {
 
   return (
     <div className="relative flex items-center">
-      <Icon icon={icon} className="absolute left-3 " />
+      <Icon icon={icon} className="absolute w-4 h-4 left-3" />
       <input
         className={clsx(inputStyles, { [errorStyles]: error }, className)}
         value={value}
