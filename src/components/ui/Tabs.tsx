@@ -1,9 +1,9 @@
 import { cn } from "~/utils/cn"
 import { Icon } from "./Icon"
 
-interface TabItem {
+export interface TabItem {
   label: string
-  icon: string
+  icon: unknown
   onClick: () => void
 }
 
@@ -14,13 +14,14 @@ interface TabsProps {
 
 export const Tabs = (props: TabsProps) => {
   const { items, selectedTab } = props
+
   return (
-    <div className="flex w-full">
+    <div className="flex items-center gap-x-4">
       {items.map((item) => (
         <button
           key={item.label}
           className={cn(
-            'flex items-center justify-center gap-2 py-3 w-32 rounded-lg text-gray-400 group',
+            'flex items-center justify-center gap-2 py-3 px-7 rounded-lg min-w-min text-gray-400 group',
             item.label === selectedTab.label && 'bg-pink-100 text-primary'
           )}
           onClick={item.onClick}

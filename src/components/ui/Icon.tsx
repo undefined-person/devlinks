@@ -10,7 +10,7 @@ export const Icon = (props: IconProps) => {
   const { className, icon: Icon } = props
 
   return (
-    <Icon className={cn('fill-gray-400', {}, className)} />
+    <Icon className={cn('fill-gray-400 text-gray-400 ', {}, className)} />
   )
 }
 
